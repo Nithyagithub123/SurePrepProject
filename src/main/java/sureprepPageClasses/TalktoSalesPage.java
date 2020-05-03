@@ -19,10 +19,11 @@ public class TalktoSalesPage extends PageBaseClass {
 		js.executeScript("window.scrollBy(0,1000)");
 		
 		driver.findElement(By.name("firstname")).sendKeys("reena");
-//		driver.findElement(By.name("phone")).sendKeys("4566788899");
-//		driver.findElement(By.name("company")).sendKeys("ysd");
-//		Select dropdown=new Select(driver.findElement(By.xpath(".//span[@role='textbox']")));
-//		dropdown.selectByIndex(3);
+		driver.findElement(By.name("phone")).sendKeys("4566788899");
+		driver.findElement(By.name("company")).sendKeys("ysd");
+		Select dropdown=new Select(driver.findElement(By.xpath(".//span[@role='textbox']")));
+		dropdown.selectByIndex(3);
+		System.out.println("drop down");
 		
 		return new TalktoSalesPage(driver);
 	}
